@@ -1,10 +1,9 @@
 package main
 
 import (
+	"example.com/greetings"
 	"fmt"
 	"log"
-
-	"example.com/greetings"
 )
 
 func main() {
@@ -14,8 +13,11 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
+	// A slice of names.
+	names := []string{"Gladys", "Samantha", "Darrin"}
+
 	// Get a greeting message and print it.
-	message, err := greetings.Hello("Joe")
+	message, err := greetings.Hellos(names)
 
 	// If an error was returned, print it to the console and
 	// exit the program.
